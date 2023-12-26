@@ -1,5 +1,7 @@
 import "./css/style.css";
 
+//default layout applied to all pages
+
 import { Inter } from "next/font/google";
 
 import Header from "@/components/ui/header";

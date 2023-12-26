@@ -8,8 +8,21 @@ import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
-  const [top, setTop] = useState<boolean>(true);
+  //random color
+  const colors = {
+    red: "bg-red-200",
+    yellow: "bg-yellow-200",
+    green: "bg-green-200",
+    blue: "bg-blue-200",
+    indigo: "bg-indigo-200",
+    purple: "bg-purple-200",
+    pink: "bg-pink-200",
+  };
+  const colorKeys = Object.keys(colors);
+  const randomColor =
+    colors[colorKeys[Math.floor(Math.random() * colorKeys.length)]];
 
+  const [top, setTop] = useState<boolean>(true);
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
     window.pageYOffset > 10 ? setTop(false) : setTop(true);
@@ -23,11 +36,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${
-        !top ? "bg-white backdrop-blur-sm shadow-lg" : ""
+      className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300  ease-in-out ${
+        !top ? "backdrop-blur-sm shadow-lg bg-gray-700" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
+      <div className=" max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Site branding */}
           <div className="shrink-0 mr-4">
@@ -39,26 +52,17 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link
-                  href="/events"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
+                <Link href="/events" className="header-link">
                   活动
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/blog"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
+                <Link href="/blog" className="header-link">
                   博客
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
+                <Link href="/about" className="header-link">
                   关于我们
                 </Link>
               </li>

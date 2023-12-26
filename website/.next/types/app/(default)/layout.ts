@@ -1,4 +1,4 @@
-// File: D:\projects\HomebrewAI\tailwind-landing-page-template\app\(default)\layout.tsx
+// File: D:\projects\HomebrewAI\HomebrewAI\website\app\(default)\layout.tsx
 import * as entry from '../../../../app/(default)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

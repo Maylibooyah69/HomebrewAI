@@ -1,18 +1,21 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 /* Additional styles */
-@import 'additional-styles/utility-patterns.css';
-@import 'additional-styles/range-slider.css';
-@import 'additional-styles/toggle-switch.css';
-@import 'additional-styles/theme.css';
+@import "additional-styles/utility-patterns.css";
+@import "additional-styles/range-slider.css";
+@import "additional-styles/toggle-switch.css";
+@import "additional-styles/theme.css";
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 /* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
 @layer utilities {
-    .rtl {
-        direction: rtl;
-    }
+  .rtl {
+    direction: rtl;
+  }
 }
 
+.header-link {
+  @apply font-medium text-white hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out hover:underline;
+}
