@@ -14,6 +14,7 @@ type Post = {
   image: string;
   summary: string;
   slug: string;
+  date: string;
 };
 
 const PostCard: React.FC<Post> = ({
@@ -23,14 +24,16 @@ const PostCard: React.FC<Post> = ({
   summary,
   image,
   slug,
+  date,
 }) => {
+  console.log(slug);
   return (
     <Link href={`/blog/${slug}`}>
       <Card sx={{ maxWidth: 345, backgroundColor: "white" }}>
         <CardActionArea className="">
           <CardMedia>
             <Image
-              src={`/images/blog-posts/${slug}/${image}`}
+              src={`/images/blog-posts/${slug}/preview.png`}
               alt="preview image"
               width={345}
               height={200}

@@ -19,3 +19,11 @@
 .header-link {
   @apply font-medium text-white px-5 py-3 flex items-center transition duration-150 ease-in-out hover:underline;
 }
+
+.blog-content > h1 {
+  @apply text-4xl font-bold text-center text-black;
+}
+
+.blog-content > h2 {
+  @apply text-3xl font-bold text-center text-black;
+}

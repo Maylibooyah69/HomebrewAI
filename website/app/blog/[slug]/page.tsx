@@ -3,12 +3,14 @@ export const metadata = {
   description: "Page description",
 };
 
-import ComingSoon from "@/components/comingsoon";
+import PostContent from "./PostContent";
 
-export default function Home() {
+export default function PostDetail({ params }: { params: { slug: string } }) {
   return (
     <>
-      <ComingSoon />
+      <div className="flex justify-center pt-20">
+        <PostContent slug={params.slug} />
+      </div>
     </>
   );
 }
