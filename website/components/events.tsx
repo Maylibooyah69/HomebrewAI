@@ -6,6 +6,8 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 export default function Events() {
   return (
     <section className="relative">
+      {/* background image */}
+
       {/* Illustration behind content */}
       <div
         className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -mb-32"
@@ -73,6 +75,7 @@ export default function Events() {
               alt="image 1"
               className="h-full w-full object-cover"
             />
+
             <img
               src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
               alt="image 2"

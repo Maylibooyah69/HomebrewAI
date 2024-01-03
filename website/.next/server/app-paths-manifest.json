@@ -1,3 +1,7 @@
 {
-  "/(default)/page": "app/(default)/page.js"
+  "/events/page": "app/events/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/(default)/page": "app/(default)/page.js",
+  "/(auth)/signup/page": "app/(auth)/signup/page.js"
 }

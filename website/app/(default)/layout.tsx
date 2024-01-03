@@ -23,7 +23,7 @@ export default function DefaultLayout({
 
   return (
     <>
-      <main className="grow">{children}</main>
+      <main className="flex w-full flex-col">{children}</main>
       <Footer />
     </>
   );

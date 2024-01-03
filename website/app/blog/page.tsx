@@ -1,14 +1,15 @@
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "Read our blog posts",
+  description: "Read our blog posts",
 };
 
-import ComingSoon from "@/components/comingsoon";
+import FeaturedPosts from "./FeaturedPosts";
+//Featured Posts
 
 export default function Home() {
   return (
     <>
-      <ComingSoon />
+      <FeaturedPosts />
     </>
   );
 }

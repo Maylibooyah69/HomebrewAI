@@ -25,7 +25,13 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body
-        className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}
+        className={`${inter.variable} font-inter antialiased text-gray-900 tracking-tight`}
+        style={{
+          backgroundImage: 'url("/images/programming.jpg")',
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
       >
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />

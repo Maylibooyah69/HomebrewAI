@@ -5,6 +5,8 @@ import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import FeaturesBg from "@/public/images/features-bg.png";
 import FeaturesElement from "@/public/images/features-element.png";
+import { Carousel } from "@material-tailwind/react";
+import blobs from "@/public/images/blob-scene-haikei.svg";
 
 export default function Features() {
   const [tab, setTab] = useState<number>(1);
@@ -22,25 +24,36 @@ export default function Features() {
 
   return (
     <section className="relative">
-      {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div
-        className="absolute inset-0 bg-gray-100 pointer-events-none mb-16"
-        aria-hidden="true"
-      ></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
+      {/* background image */}
+      {/* <div className="absolute inset-0 -z-1">
+        <Image
+          src={blobs}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          alt="blobs"
+        />
+      </div> */}
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="pt-12 md:pt-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">社群理念简介</h1>
-            <p className="text-xl text-gray-600">
+            <h1 className="h2 mb-4 text-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-t from-cyan-500 to-blue-500">
+                俱乐部
+              </span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-green-500">
+                理念
+              </span>
+            </h1>
+            <p className="text-xl text-black">
               我们相信人工智能是未来的趋势，将会在各个领域产生深远的影响。我们的目标是为每个人提供一个学习和交流的平台，让大家共同探讨相关的应用和发展。社区会以开源的方式运作，公开教程，项目，以及讨论。欢迎不同背景的人加入，共同学习和进步。
             </p>
           </div>
 
           {/* Section content */}
-          <div className="md:grid md:grid-cols-12 md:gap-6">
+          <div className="md:grid md:grid-cols-12 md:gap-6  justify-center items-center">
             {/* Content */}
             <div
               className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6"
@@ -65,17 +78,8 @@ export default function Features() {
                       科普人工智能知识
                     </div>
                     <div className="text-gray-600">
-                      我们会定期的举办人工智能相关的讲座和讨论会，让大家了解人工智能的基本知识，以及最新的发展。让大家能够更好的了解人工智能，减少误解和焦虑。
+                      定期的举办人工智能相关的讲座和讨论会，让大家了解人工智能的基本知识，以及最新的发展。
                     </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M11.953 4.29a.5.5 0 00-.454-.292H6.14L6.984.62A.5.5 0 006.12.173l-6 7a.5.5 0 00.379.825h5.359l-.844 3.38a.5.5 0 00.864.445l6-7a.5.5 0 00.075-.534z" />
-                    </svg>
                   </div>
                 </a>
                 <a
@@ -95,20 +99,8 @@ export default function Features() {
                       实践于具体的项目
                     </div>
                     <div className="text-gray-600">
-                      我们希望通过具体的案例从实践的经验中学习到真正应用的难点和机会，让更多的人有亲身体验，从而更好的理解人工智能的发展。
+                      通过具体的案例从实践的经验中学习到真正应用的难点和机会。
                     </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"
-                        fillRule="nonzero"
-                      />
-                    </svg>
                   </div>
                 </a>
                 <a
@@ -125,24 +117,11 @@ export default function Features() {
                 >
                   <div>
                     <div className="font-bold leading-snug tracking-tight mb-1">
-                      寻求合作机会共同进步
+                      寻求合作机会多元化进步
                     </div>
                     <div className="text-gray-600">
-                      我们非常重视与企业的合作，希望能够通过合作解决实际的问题，让大家能够更好的理解人工智能的应用场景，同时也能够提升自己的能力。
+                      与不同个体的合作，通过合作解决实际的问题。让每个人都能够从中学习到新的知识和技能。
                     </div>
-                  </div>
-                  <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg
-                      className="w-3 h-3 fill-current"
-                      viewBox="0 0 12 12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M11.334 8.06a.5.5 0 00-.421-.237 6.023 6.023 0 01-5.905-6c0-.41.042-.82.125-1.221a.5.5 0 00-.614-.586 6 6 0 106.832 8.529.5.5 0 00-.017-.485z"
-                        fill="#191919"
-                        fillRule="nonzero"
-                      />
-                    </svg>
                   </div>
                 </a>
               </div>
@@ -150,109 +129,113 @@ export default function Features() {
 
             {/* Tabs items */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
-              <div className="transition-all">
-                <div
-                  className="relative flex flex-col text-center lg:text-right"
-                  data-aos="zoom-y-out"
-                  ref={tabs}
+              <div
+                className="relative flex flex-col text-center lg:text-right transition-all "
+                data-aos="zoom-y-out"
+                ref={tabs}
+              >
+                {/* Item 1 */}
+                <Transition
+                  show={tab === 1}
+                  appear={true}
+                  className="w-full"
+                  enter="transition ease-in-out duration-700 transform order-first"
+                  enterFrom="opacity-0 translate-y-16"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in-out duration-300 transform absolute"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 -translate-y-16"
+                  beforeEnter={() => heightFix()}
+                  unmount={false}
                 >
-                  {/* Item 1 */}
-                  <Transition
-                    show={tab === 1}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg}
-                        width={500}
-                        height="462"
-                        alt="Features bg"
+                  <div className="relative inline-flex flex-col justify-center items-center h-full">
+                    <Carousel className="rounded-xl h-full w-full object-cover">
+                      <img
+                        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+                        alt="image 1"
+                        className="h-full w-full object-cover"
                       />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement}
-                        width={500}
-                        height="44"
-                        alt="Element"
-                        style={{ top: "30%" }}
+                      <img
+                        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                        alt="image 2"
+                        className="h-full w-full object-cover"
                       />
-                    </div>
-                  </Transition>
-                  {/* Item 2 */}
-                  <Transition
-                    show={tab === 2}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg}
-                        width={500}
-                        height="462"
-                        alt="Features bg"
+                      <img
+                        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                        alt="image 3"
+                        className="h-full w-full object-cover"
                       />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement}
-                        width={500}
-                        height="44"
-                        alt="Element"
-                        style={{ top: "30%" }}
+                    </Carousel>
+                  </div>
+                </Transition>
+                {/* Item 2 */}
+                <Transition
+                  show={tab === 2}
+                  appear={true}
+                  className="w-full"
+                  enter="transition ease-in-out duration-700 transform order-first"
+                  enterFrom="opacity-0 translate-y-16"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in-out duration-300 transform absolute"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 -translate-y-16"
+                  beforeEnter={() => heightFix()}
+                  unmount={false}
+                >
+                  <div className="relative inline-flex flex-col justify-center items-center h-full">
+                    <Carousel className="rounded-xl h-full w-full object-cover">
+                      <img
+                        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+                        alt="image 1"
+                        className="h-full w-full object-cover"
                       />
-                    </div>
-                  </Transition>
-                  {/* Item 3 */}
-                  <Transition
-                    show={tab === 3}
-                    appear={true}
-                    className="w-full"
-                    enter="transition ease-in-out duration-700 transform order-first"
-                    enterFrom="opacity-0 translate-y-16"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transition ease-in-out duration-300 transform absolute"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-16"
-                    beforeEnter={() => heightFix()}
-                    unmount={false}
-                  >
-                    <div className="relative inline-flex flex-col">
-                      <Image
-                        className="md:max-w-none mx-auto rounded"
-                        src={FeaturesBg}
-                        width={500}
-                        height="462"
-                        alt="Features bg"
+                      <img
+                        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                        alt="image 2"
+                        className="h-full w-full object-cover"
                       />
-                      <Image
-                        className="md:max-w-none absolute w-full left-0 transform animate-float"
-                        src={FeaturesElement}
-                        width={500}
-                        height="44"
-                        alt="Element"
-                        style={{ top: "30%" }}
+                      <img
+                        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                        alt="image 3"
+                        className="h-full w-full object-cover"
                       />
-                    </div>
-                  </Transition>
-                </div>
+                    </Carousel>
+                  </div>
+                </Transition>
+                {/* Item 3 */}
+                <Transition
+                  show={tab === 3}
+                  appear={true}
+                  className="w-full"
+                  enter="transition ease-in-out duration-700 transform order-first"
+                  enterFrom="opacity-0 translate-y-16"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in-out duration-300 transform absolute"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 -translate-y-16"
+                  beforeEnter={() => heightFix()}
+                  unmount={false}
+                >
+                  <div className="relative inline-flex flex-col justify-center items-center h-full">
+                    <Carousel className="rounded-xl h-full w-full object-cover">
+                      <img
+                        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+                        alt="image 1"
+                        className="h-full w-full object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+                        alt="image 2"
+                        className="h-full w-full object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+                        alt="image 3"
+                        className="h-full w-full object-cover"
+                      />
+                    </Carousel>
+                  </div>
+                </Transition>
               </div>
             </div>
           </div>

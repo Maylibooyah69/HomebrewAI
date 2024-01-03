@@ -1,11 +1,13 @@
-export const metadata = {
-  title: "Sign Up - Simple",
-  description: "Page description",
-};
+"use client";
 
+import axios from "axios";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function SignUp() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   return (
     <section className="bg-gradient-to-b from-gray-100 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -62,7 +64,7 @@ export default function SignUp() {
                   </button>
                 </div>
               </div>
-              <div className="text-sm text-gray-500 text-center mt-3">
+              {/* <div className="text-sm text-gray-500 text-center mt-3">
                 By creating an account, you agree to the{" "}
                 <a className="underline" href="#0">
                   terms & conditions
@@ -72,7 +74,7 @@ export default function SignUp() {
                   privacy policy
                 </a>
                 .
-              </div>
+              </div> */}
             </form>
             <div className="flex items-center my-6">
               <div
