@@ -24,8 +24,6 @@ export default function Header() {
     pink: "bg-pink-200",
   };
   const colorKeys = Object.keys(colors);
-  const randomColor =
-    colors[colorKeys[Math.floor(Math.random() * colorKeys.length)]];
 
   const [top, setTop] = useState<boolean>(true);
   // detect whether user has scrolled the page down by 10px

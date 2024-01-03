@@ -1,0 +1,1 @@
+{"/_not-found":"/_not-found","/api/hello/route":"/api/hello","/api/signup/route":"/api/signup","/about/page":"/about","/events/page":"/events","/blog/[slug]/page":"/blog/[slug]","/blog/page":"/blog","/(auth)/signup/page":"/signup","/(auth)/reset-password/page":"/reset-password","/(default)/page":"/","/(auth)/signin/page":"/signin","/events/[...slug]/page":"/events/[...slug]"}

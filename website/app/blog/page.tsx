@@ -1,5 +1,3 @@
-export const revalidate = 3600;
-
 export const metadata = {
   title: "Read our blog posts",
   description: "Read our blog posts",
@@ -10,17 +8,12 @@ import { getFeaturedPosts } from "./post-utils";
 //Featured Posts
 
 export default async function Home() {
-  const props = await getPostData();
+  const featuredPosts = await getFeaturedPosts();
   return (
     <>
-      <FeaturedPosts posts={props.posts} />
+      <FeaturedPosts
+        posts={featuredPosts.map((post) => ({ ...post, slug: post.postSlug }))}
+      />
     </>
   );
-}
-
-export async function getPostData() {
-  const featuredPosts = await getFeaturedPosts();
-  return {
-    posts: featuredPosts,
-  };
 }

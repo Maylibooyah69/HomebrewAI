@@ -1,5 +1,14 @@
 {
+  "/_not-found": "app/_not-found.js",
+  "/api/hello/route": "app/api/hello/route.js",
+  "/api/signup/route": "app/api/signup/route.js",
+  "/about/page": "app/about/page.js",
+  "/events/page": "app/events/page.js",
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/blog/page": "app/blog/page.js",
-  "/(default)/page": "app/(default)/page.js"
+  "/(auth)/signup/page": "app/(auth)/signup/page.js",
+  "/(auth)/reset-password/page": "app/(auth)/reset-password/page.js",
+  "/(default)/page": "app/(default)/page.js",
+  "/(auth)/signin/page": "app/(auth)/signin/page.js",
+  "/events/[...slug]/page": "app/events/[...slug]/page.js"
 }

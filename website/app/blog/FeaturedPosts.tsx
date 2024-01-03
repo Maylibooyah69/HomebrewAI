@@ -37,8 +37,7 @@ type Post = {
 //   },
 // ];
 
-const FeaturedPosts: React.FC = ({ posts }) => {
-  console.log(posts);
+const FeaturedPosts: React.FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     // Feature posts
     <div className="flex flex-col items-center space-y-4 text-lg  text-white pt-20">
